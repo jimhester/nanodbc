@@ -3733,6 +3733,32 @@ void statement::bind(
     impl_->bind(param, values, elements, nulls, (T*)0, direction);
 }
 
+void statement::bind(
+    short param,
+    const std::vector<std::vector<uint8_t>> & values,
+    param_direction direction)
+{
+    impl_->bind(param, values, (bool*)0, (uint8_t*)0, direction);
+}
+
+void statement::bind(
+    short param,
+    const std::vector<std::vector<uint8_t>> & values,
+    const bool* nulls,
+    param_direction direction)
+{
+    impl_->bind(param, values, nulls, (uint8_t*)0, direction);
+}
+
+void statement::bind(
+    short param,
+    const std::vector<std::vector<uint8_t>> & values,
+    const uint8_t* null_sentry,
+    param_direction direction)
+{
+    impl_->bind(param, values, (bool*)0, null_sentry, direction);
+}
+
 void statement::bind_strings(
     short param,
     const std::vector<string_type>& values,

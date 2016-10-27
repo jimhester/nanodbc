@@ -365,6 +365,11 @@ TEST_CASE_METHOD(mssql_fixture, "string_vector_test", "[mssql][string]")
     string_vector_test();
 }
 
+TEST_CASE_METHOD(mssql_fixture, "batch_binary_test", "[mssql][binary]")
+{
+    batch_binary_test();
+}
+
 TEST_CASE_METHOD(mssql_fixture, "transaction_test", "[mssql][transaction]")
 {
     transaction_test();
