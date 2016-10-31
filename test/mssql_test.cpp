@@ -87,6 +87,11 @@ TEST_CASE_METHOD(mssql_fixture, "test_affected_rows", "[mssql][affected_rows]")
     }
 }
 
+TEST_CASE_METHOD(mssql_fixture, "test_batch_binary", "[mssql][batch][binary]")
+{
+    test_batch_binary();
+}
+
 TEST_CASE_METHOD(mssql_fixture, "test_batch_insert_integral", "[mssql][batch][integral]")
 {
     test_batch_insert_integral();

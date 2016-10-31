@@ -69,6 +69,11 @@ TEST_CASE_METHOD(mysql_fixture, "test_affected_rows", "[mysql][affected_rows]")
     }
 }
 
+TEST_CASE_METHOD(mysql_fixture, "test_batch_binary", "[mysql][batch][binary]")
+{
+    test_batch_binary();
+}
+
 TEST_CASE_METHOD(mysql_fixture, "test_batch_insert_integer", "[mysql][batch][integral]")
 {
     test_batch_insert_integral();

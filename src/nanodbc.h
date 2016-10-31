@@ -754,6 +754,29 @@ public:
         bool const* nulls,
         param_direction direction = PARAM_IN);
 
+    /// \brief Binds multiple values.
+    /// \see bind_multi
+    void bind(
+        short param,
+        std::vector<std::vector<uint8_t>> const& values,
+        param_direction direction = PARAM_IN);
+
+    /// \brief Binds multiple values.
+    /// \see bind_multi
+    void bind(
+        short param,
+        std::vector<std::vector<uint8_t>> const& values,
+        bool const* nulls,
+        param_direction direction = PARAM_IN);
+
+    /// \brief Binds multiple values.
+    /// \see bind_multi
+    void bind(
+        short param,
+        std::vector<std::vector<uint8_t>> const& values,
+        uint8_t const* null_sentry,
+        param_direction direction = PARAM_IN);
+
     /// @}
 
     /// \addtogroup bind_strings Binding multiple string values

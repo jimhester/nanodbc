@@ -100,6 +100,11 @@ TEST_CASE_METHOD(sqlite_fixture, "test_driver", "[sqlite][driver]")
     test_driver();
 }
 
+TEST_CASE_METHOD(sqlite_fixture, "test_batch_binary", "[sqlite][batch][binary]")
+{
+    test_batch_binary();
+}
+
 // TODO: Investigate why these tests fail on Linux
 // See https://github.com/lexicalunit/nanodbc/pull/220#issuecomment-257029475
 #ifdef _WIN32

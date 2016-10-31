@@ -27,6 +27,11 @@ TEST_CASE_METHOD(postgresql_fixture, "test_driver", "[postgresql][driver]")
     test_driver();
 }
 
+TEST_CASE_METHOD(postgresql_fixture, "test_batch_binary", "[postgresql][batch][binary]")
+{
+    test_batch_binary();
+}
+
 TEST_CASE_METHOD(postgresql_fixture, "test_batch_insert_integer", "[postgresql][batch][integral]")
 {
     test_batch_insert_integral();

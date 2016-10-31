@@ -27,6 +27,11 @@ TEST_CASE_METHOD(vertica_fixture, "test_driver", "[vertica][driver]")
     test_driver();
 }
 
+TEST_CASE_METHOD(vertica_fixture, "test_batch_binary", "[vertica][batch][binary]")
+{
+    test_batch_binary();
+}
+
 TEST_CASE_METHOD(vertica_fixture, "test_batch_insert_integer", "[vertica][batch][integral]")
 {
     test_batch_insert_integral();
